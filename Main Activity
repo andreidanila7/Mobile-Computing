@@ -39,7 +39,12 @@ public class MainActivity extends AppCompatActivity {
                 final Animation.AnimationListener animationListener = new Animation.AnimationListener() {
                     @Override
                     public void onAnimationStart(Animation animation) {
-
+                    }
+                    @Override
+                    
+                    public void onAnimationEnd(Animation animation) {
+                    }
+                    @Override
                         int value = randomDiceValue();
                         int res = getResources().getIdentifier("dice_" + value, "drawable", "com.example.dice_roll");
 
@@ -50,7 +55,12 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                     }
+                    @Override
+                   public void onAnimationRepeat(Animation animation) {
+                    }
+                    
                 };
+                
 
                 anim1.setAnimationListener(animationListener);
                 anim2.setAnimationListener(animationListener);
